@@ -1,0 +1,118 @@
+1.function calculateDiscount(totalPurchaseAmount) {
+  let discount = 0;
+  if (totalPurchaseAmount >= 50 && totalPurchaseAmount <= 100) {
+    discount = totalPurchaseAmount * 0.05;
+  } else if (totalPurchaseAmount > 100 && totalPurchaseAmount <= 200) {
+    discount = totalPurchaseAmount * 0.10;
+  } else if (totalPurchaseAmount > 200) {
+    discount = totalPurchaseAmount * 0.15;
+  }
+  
+  const discountedAmount = totalPurchaseAmount - discount;
+  console.log("Discounted amount: $" + discountedAmount.toFixed(2));
+  console.log("Total amount: $" + totalPurchaseAmount.toFixed(2));
+  console.log("Discount amount: $" + discount.toFixed(2));
+}
+
+// Example usage
+calculateDiscount(40);   // No discount applied
+calculateDiscount(75);   // 5% discount applied
+calculateDiscount(120);  // 10% discount applied
+calculateDiscount(250);  // 15% discount applied
+
+
+
+2.<!DOCTYPE html>
+<html>
+<head>
+    <title>Filter Even Numbers</title>
+</head>
+<body>
+    <script>
+        function filterEvenNumbers(arr) {
+            return arr.filter(num => num % 2 === 0);
+        }
+
+        const originalArray = [12, 34, 45, 23, 6, 78, 54, 90];
+        const filteredEvenNumbers = filterEvenNumbers(originalArray);
+
+        console.log("Original Array: " + JSON.stringify(originalArray));
+        console.log("Filtered Even Numbers: " + JSON.stringify(filteredEvenNumbers));
+    </script>
+</body>
+</html>
+
+
+3.<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table Generator</title>
+</head>
+<body>
+    <script>
+        function generateMultiplicationTable(number) {
+            console.log(`Generate Multiplication Table for: ${number}`);
+            for (let i = 1; i <= 10; i++) {
+                const result = i * number;
+                console.log(`${i} x ${number} = ${result}`);
+            }
+        }
+
+        const inputNumber = parseInt(prompt("Enter a number to generate its multiplication table:"));
+        generateMultiplicationTable(inputNumber);
+    </script>
+</body>
+</html>
+
+Generate Multiplication Table for: 5
+1 x 5 = 5
+2 x 5 = 10
+3 x 5 = 15
+4 x 5 = 20
+5 x 5 = 25
+6 x 5 = 30
+7 x 5 = 35
+8 x 5 = 40
+9 x 5 = 45
+10 x 5 = 50
+
+
+
+4.<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Calculator</title>
+</head>
+<body>
+    <script>
+        function calculateGrade(score) {
+            let grade;
+            switch (true) {
+                case score >= 90:
+                    grade = 'A';
+                    break;
+                case score >= 80:
+                    grade = 'B';
+                    break;
+                case score >= 70:
+                    grade = 'C';
+                    break;
+                case score >= 60:
+                    grade = 'D';
+                    break;
+                default:
+                    grade = 'F';
+                    break;
+            }
+            return grade;
+        }
+
+        // Example usage
+        console.log(calculateGrade(92)); // Output: 'A'
+        console.log(calculateGrade(84)); // Output: 'B'
+        console.log(calculateGrade(75)); // Output: 'C'
+        console.log(calculateGrade(67)); // Output: 'D'
+        console.log(calculateGrade(55)); // Output: 'F'
+    </script>
+</body>
+</html>
